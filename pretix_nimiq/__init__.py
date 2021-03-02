@@ -29,10 +29,10 @@ __version__ = "1.0.0"
 
 class PluginApp(PluginConfig):
     name = "pretix_nimiq"
-    verbose_name = "NIMIQ"
+    verbose_name = "Nimiq"
 
     class PretixPluginMeta:
-        name = gettext_lazy("NIMIQ")
+        name = gettext_lazy("Nimiq")
         author = "Marvin Schopf"
         description = gettext_lazy("Accept payments with the cryptocurrency NIMIQ")
         visible = True
