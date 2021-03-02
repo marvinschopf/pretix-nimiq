@@ -16,3 +16,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 """
+
+from django.dispatch import receiver
+
+from pretix.base.signals import (
+    logentry_display,
+    register_payment_providers, requiredaction_display, )
+
+@receiver(register_payment_providers, dispatch_uid="payment_nimiq")
+def register_payment_provider(sender, **kwargs):
+    from .payment import Nimiq
+    return Nimiq
