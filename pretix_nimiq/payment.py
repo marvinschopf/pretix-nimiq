@@ -44,3 +44,7 @@ class Nimiq(BasePaymentProvider):
                 )
             ]
         )
+
+    def execute_payment(request, payment):
+        paymentId = payment.id
+        return None
